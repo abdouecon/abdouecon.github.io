@@ -43,8 +43,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .portrait{width:100%;max-width:270px;aspect-ratio:3 / 4;flex:none;border-radius:3px;overflow:hidden;background:var(--accent-soft);box-shadow:0 4px 16px var(--shadow);display:grid;place-items:center}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .portrait .mono{font-family:var(--serif);font-size:56px;color:var(--accent);font-weight:600;letter-spacing:.02em}
-.side h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.2;margin:0}
-.side .role{color:var(--muted);font-size:.95rem;line-height:1.45;margin:0}
+.side h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.35rem,2.3vw,1.75rem);line-height:1.2;margin:0}
+.side h1::after{content:"";display:block;width:44px;height:3px;border-radius:2px;background:var(--accent);margin-top:12px}
+.side .role{color:var(--fg);font-weight:700;font-size:.97rem;line-height:1.45;margin:14px 0 0}
 .side nav{display:flex;flex-direction:column;border-top:1px solid var(--line);padding-top:12px}
 .side nav a{color:var(--fg);padding:5px 0 5px 10px;font-size:.98rem;border-left:2px solid transparent;transition:color .15s,border-color .15s}
 .side nav a:hover{color:var(--accent);text-decoration:none}
@@ -55,10 +56,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 /* Reading column */
 main{min-width:0;max-width:760px;display:flex;flex-direction:column;gap:56px}
 section{scroll-margin-top:24px}
-h2{font-family:var(--serif);font-weight:600;font-size:1.65rem;line-height:1.2;margin:0 0 18px;text-wrap:balance}
+h2{display:inline-block;font-family:var(--serif);font-weight:700;font-size:1.2rem;line-height:1.2;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding-bottom:5px;border-bottom:2px solid var(--accent);margin:0 0 22px;text-wrap:balance}
+section > h2 + *{margin-top:0}
 h3.group{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:36px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 h3.group:first-of-type{margin-top:8px}
-h4{font-family:var(--serif);font-weight:600;font-size:1.05rem;margin:22px 0 6px}
+h4{font-family:var(--sans);font-weight:700;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);padding-bottom:6px;border-bottom:1px solid var(--line);margin:24px 0 10px}
 p{margin:0 0 14px}
 .about p{max-width:66ch}
 .affil{list-style:none;padding:0;margin:0 0 16px;color:var(--fg)}
