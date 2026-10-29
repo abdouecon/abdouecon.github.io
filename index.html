@@ -15,17 +15,17 @@
 /* Layout: fixed left identity column (photo, name, nav) beside one reading column, like a classic academic homepage. Stacks on phones. */
 :root{
   --bg:#fcfbfd; --panel:#f4f1f8; --fg:#1d1a22; --muted:#625c6c; --line:#e5e0ec;
-  --accent:#5b2a86; --accent-soft:#ece4f5; --badge:#9a5b00; --badge-soft:#fbefdc;
+  --accent:#5b2a86; --accent-soft:#ece4f5; --shadow:rgba(0,0,0,.07); --badge:#9a5b00; --badge-soft:#fbefdc;
   --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
   --sans:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#131118; --panel:#1b1822; --fg:#e8e4ef; --muted:#a29bad; --line:#2e2938;
-  --accent:#b993e6; --accent-soft:#2a2138; --badge:#e7a94b; --badge-soft:#2e2414; color-scheme:dark}}
+  --accent:#b993e6; --accent-soft:#2a2138; --shadow:rgba(0,0,0,.45); --badge:#e7a94b; --badge-soft:#2e2414; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#131118; --panel:#1b1822; --fg:#e8e4ef; --muted:#a29bad; --line:#2e2938;
-  --accent:#b993e6; --accent-soft:#2a2138; --badge:#e7a94b; --badge-soft:#2e2414; color-scheme:dark}
+  --accent:#b993e6; --accent-soft:#2a2138; --shadow:rgba(0,0,0,.45); --badge:#e7a94b; --badge-soft:#2e2414; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -35,13 +35,13 @@ a{color:var(--accent);text-decoration:none;text-underline-offset:2px}
 a:hover{text-decoration:underline}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
 
-.wrap{display:grid;grid-template-columns:clamp(176px,24vw,250px) minmax(0,1fr);gap:clamp(28px,5vw,56px);max-width:1120px;margin:0 auto;
+.wrap{display:grid;grid-template-columns:clamp(200px,24vw,270px) minmax(0,1fr);gap:clamp(28px,5vw,56px);max-width:1120px;margin:0 auto;
   padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px));padding-block:48px 64px}
 
 /* Identity column */
 .side{position:sticky;top:calc(28px + env(safe-area-inset-top, 0px));align-self:start;display:flex;flex-direction:column;gap:16px;max-height:calc(100vh - 56px);overflow-y:auto;scrollbar-width:thin}
-.portrait{width:clamp(120px,15vw,170px);height:clamp(120px,15vw,170px);flex:none;border-radius:50%;overflow:hidden;background:var(--accent-soft);display:grid;place-items:center}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.portrait{width:100%;max-width:270px;aspect-ratio:3 / 4;flex:none;border-radius:3px;overflow:hidden;background:var(--accent-soft);box-shadow:0 4px 16px var(--shadow);display:grid;place-items:center}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .portrait .mono{font-family:var(--serif);font-size:56px;color:var(--accent);font-weight:600;letter-spacing:.02em}
 .side h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.2;margin:0}
 .side .role{color:var(--muted);font-size:.95rem;line-height:1.45;margin:0}
@@ -129,8 +129,8 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
 
 @media (max-width:640px){
   .wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 48px}
-  .side{position:static;max-height:none;overflow:visible;padding-right:44px;display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 18px;align-items:center}
-  .portrait{width:96px;height:96px;grid-row:span 2}
+  .side{position:static;max-height:none;overflow:visible;padding-right:44px;display:grid;grid-template-columns:108px minmax(0,1fr);gap:4px 18px;align-items:center}
+  .portrait{width:108px;grid-row:span 2}
   .portrait .mono{font-size:34px}
   .side nav{grid-column:1 / -1;flex-direction:row;flex-wrap:wrap;gap:4px 18px;margin-top:10px}
   .side nav a{padding:4px 0;margin-left:0;border-left:0}
