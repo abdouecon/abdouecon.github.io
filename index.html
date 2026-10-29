@@ -120,6 +120,17 @@ details.more ul{margin-top:12px}
 :root[data-theme="dark"] .theme-toggle .sun{display:block}
 @media (prefers-reduced-motion: reduce){.theme-toggle{transition:none}}
 
+/* Cite: copies the BibTeX entry */
+.cite-btn{font:inherit;font-size:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer}
+.cite-btn:hover{text-decoration:underline}
+.cite-fallback{margin:8px 0 6px;max-width:100%}
+.cite-fallback p{margin:0 0 6px;font-size:.9rem;color:var(--muted)}
+.cite-fallback textarea{width:100%;min-height:9em;font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:10px 12px;resize:vertical}
+.cite-toast{position:fixed;z-index:30;left:50%;bottom:calc(20px + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);
+  background:var(--fg);color:var(--bg);font-size:.92rem;padding:8px 16px;border-radius:999px;box-shadow:0 4px 16px var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s}
+.cite-toast.show{opacity:1}
+@media (prefers-reduced-motion: reduce){.cite-toast{transition:none}}
+
 /* Lecture notes */
 .course{margin-bottom:28px}
 .course .meta{color:var(--muted);font-size:.95rem;margin:0 0 10px}
@@ -218,7 +229,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">Conditionally accepted, <em>Quarterly Journal of Economics</em>. September 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>How should retirement benefits, labor taxes, and savings incentives be designed when health declines with age? We build a life-cycle model with health shocks, wage risk, and endogenous retirement, and estimate it on US microdata. Health affects retirement through fixed costs of working, lower wages, and higher mortality. Optimal labor wedges are hump-shaped over the life cycle and lower for workers in poor health. Mortality risk can make it optimal to subsidize saving, especially for older and less healthy workers. Retirement consumption should rise more steeply with claiming age than under the current delayed retirement credit. Flexible policies that reward later retirement and account for health come closer to the efficient allocation than a uniform increase in the retirement age.</div>
-        <div class="links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3057820" target="_blank" rel="noopener">SSRN</a>. <a href="https://www.dropbox.com/scl/fi/wx6iw9psq7bwii0e02f2d/FROT.bib?rlkey=hxaenmqpv92c3oslrxe2nzovi&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://x.com/AbdouNdiayeNYU/status/1919726526783803621" target="_blank" rel="noopener">X summary</a>. <a href="https://www.retirementflexibility.org" target="_blank" rel="noopener">Project website</a>. Coverage: <a href="https://www.chicagofed.org/publications/chicago-fed-letter/2019/419" target="_blank" rel="noopener">Chicago Fed Letter</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="NdiayeYu2025">Cite</button>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3057820" target="_blank" rel="noopener">SSRN</a>. <a href="https://x.com/AbdouNdiayeNYU/status/1919726526783803621" target="_blank" rel="noopener">X summary</a>. <a href="https://www.retirementflexibility.org" target="_blank" rel="noopener">Project website</a>. Coverage: <a href="https://www.chicagofed.org/publications/chicago-fed-letter/2019/419" target="_blank" rel="noopener">Chicago Fed Letter</a>.</div>
       </article>
 
       <article class="paper" data-topics="tax">
@@ -227,7 +238,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">Revise and resubmit, <em>American Economic Review</em>. August 2026. 2026 Yuki Arai Research Prize.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Low property taxes in California keep elderly owners in their homes and limit housing access for younger families. Raising property taxes reallocates housing toward the young through two channels: lower purchase prices reduce down payments for financially constrained buyers, and higher annual bills raise the cost of holding a home for long-tenured owners. In an overlapping generations model, raising California's rates to Texas levels increases homeownership among younger households and reduces it among older ones. Removing the step-up in basis at death also lowers elderly ownership, so part of older owners' tenure reflects the tax advantages of bequeathing property. The tax treatment of housing shapes how it is allocated across generations.</div>
-        <div class="links"><a href="https://www.nber.org/papers/w35587" target="_blank" rel="noopener">NBER</a>. <a href="https://www.dropbox.com/scl/fi/fl6c3747wz9wbot9q610d/Proptax.bib?rlkey=d2ykrmyp1d7fkpyrk49f0wby8&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://x.com/arpitrage/status/1807793814523818306" target="_blank" rel="noopener">X summary</a>. <a href="https://www.youtube.com/live/f406PN9tf-s?si=R9Nw2NWQqJ36pvTd&amp;t=3555" target="_blank" rel="noopener">Video</a>. Coverage: <a href="https://www.bloomberg.com/opinion/articles/2024-11-20/to-get-the-housing-market-moving-raise-property-taxes" target="_blank" rel="noopener">Bloomberg</a>, <a href="https://www.minneapolisfed.org/article/2024/how-higher-property-taxes-increase-home-affordability" target="_blank" rel="noopener">Minneapolis Fed</a>, <a href="https://slate.com/business/2025/01/property-tax-reform-homeowners-revolt-local-government-budget-resource-inequality.html" target="_blank" rel="noopener">Slate</a>, <a href="https://www.stern.nyu.edu/experience-stern/faculty-research/how-property-taxes-could-make-housing-affordable-young-families" target="_blank" rel="noopener">NYU Stern</a>, <a href="https://taxprofblog.aals.org/2026/08/11/coven-et-al-on-property-taxes-and-housing-allocation/" target="_blank" rel="noopener">TaxProf Blog</a>, <a href="https://www.costar.com/article/1609088083/could-higher-property-taxes-lead-to-more-homeownership-heres-what-one-study-says" target="_blank" rel="noopener">CoStar</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="CovenGolderGuptaNdiaye2026">Cite</button>. <a href="https://www.nber.org/papers/w35587" target="_blank" rel="noopener">NBER</a>. <a href="https://x.com/arpitrage/status/1807793814523818306" target="_blank" rel="noopener">X summary</a>. <a href="https://www.youtube.com/live/f406PN9tf-s?si=R9Nw2NWQqJ36pvTd&amp;t=3555" target="_blank" rel="noopener">Video</a>. Coverage: <a href="https://www.bloomberg.com/opinion/articles/2024-11-20/to-get-the-housing-market-moving-raise-property-taxes" target="_blank" rel="noopener">Bloomberg</a>, <a href="https://www.minneapolisfed.org/article/2024/how-higher-property-taxes-increase-home-affordability" target="_blank" rel="noopener">Minneapolis Fed</a>, <a href="https://slate.com/business/2025/01/property-tax-reform-homeowners-revolt-local-government-budget-resource-inequality.html" target="_blank" rel="noopener">Slate</a>, <a href="https://www.stern.nyu.edu/experience-stern/faculty-research/how-property-taxes-could-make-housing-affordable-young-families" target="_blank" rel="noopener">NYU Stern</a>, <a href="https://taxprofblog.aals.org/2026/08/11/coven-et-al-on-property-taxes-and-housing-allocation/" target="_blank" rel="noopener">TaxProf Blog</a>, <a href="https://www.costar.com/article/1609088083/could-higher-property-taxes-lead-to-more-homeownership-heres-what-one-study-says" target="_blank" rel="noopener">CoStar</a>.</div>
       </article>
 
       <article class="paper" data-topics="design">
@@ -235,7 +246,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">Revise and resubmit, <em>Management Science</em>. July 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Blockchains choose between two fee policies: Bitcoin fixes block size and lets fees clear through bidding, while Ethereum sets a base fee and lets block size adjust. I model validators as temporary monopolists who bargain with the protocol designer. Price controls perform better when demand is volatile, costs are weakly correlated with demand, and validators have strong bargaining power. Quantity controls perform better when costs rise with demand and validators have little influence. Ethereum's base fee adjusts faster than is optimal, which can make fees and block sizes oscillate. I propose bounds on block size targets that limit exploitation of maximal extractable value.</div>
-        <div class="links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4538150" target="_blank" rel="noopener">SSRN</a>. <a href="https://www.dropbox.com/scl/fi/3ww62l2fj0a573yem8fjk/blockchainfees.bib?rlkey=e7m76ts55dri7c0fmrqvc8qsx&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. Coverage: <a href="https://youtu.be/barxKtDF5i0" target="_blank" rel="noopener">a16z Crypto Research</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="Ndiaye2024FeePolicies">Cite</button>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4538150" target="_blank" rel="noopener">SSRN</a>. Coverage: <a href="https://youtu.be/barxKtDF5i0" target="_blank" rel="noopener">a16z Crypto Research</a>.</div>
       </article>
 
       <article class="paper" data-topics="debt">
@@ -243,7 +254,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">Conditionally accepted, <em>Journal of International Economics</em>. June 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>I develop a neoclassical trade model of international boycotts in which a coalition of domestic households maximizes its welfare while holding foreign welfare at a tolerated level. The coalition acts like atomistic, price-taking consumers who each face fixed budgets for spending on each country's goods. Optimal boycotts take the form of outright bans on importing certain foreign goods, and boycotters may work more when income effects dominate substitution effects. A full domestic boycott is equivalent to targeted import tariffs or a voluntary export restraint by foreign firms. Households outside the boycott leak imports and weaken its effect.</div>
-        <div class="links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737199" target="_blank" rel="noopener">SSRN</a>. <a href="https://www.dropbox.com/scl/fi/y7xfb6sh5mnfg6qmb30qk/bobcott.bib?rlkey=wuonz2x1l1vrq16lrdl34m84r&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://x.com/and_joy_/status/1761057322539901223" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://www.marketplace.org/shows/make-me-smart/economic-sanctions-vs-boycotts/" target="_blank" rel="noopener">NPR Marketplace</a>, <a href="https://afrique.latribune.fr/economie/2025-04-08/taxes-trump-l-afrique-devrait-reagir-en-phase-avec-les-autres-regions-du-monde-1022151.html" target="_blank" rel="noopener">La Tribune</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="Ndiaye2024Boycotts">Cite</button>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4737199" target="_blank" rel="noopener">SSRN</a>. <a href="https://x.com/and_joy_/status/1761057322539901223" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://www.marketplace.org/shows/make-me-smart/economic-sanctions-vs-boycotts/" target="_blank" rel="noopener">NPR Marketplace</a>, <a href="https://afrique.latribune.fr/economie/2025-04-08/taxes-trump-l-afrique-devrait-reagir-en-phase-avec-les-autres-regions-du-monde-1022151.html" target="_blank" rel="noopener">La Tribune</a>.</div>
       </article>
 
       <h3 class="group" id="published">Published &amp; Accepted</h3>
@@ -254,7 +265,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">Forthcoming, <em>American Economic Review: Insights</em>, Vol. 8, No. 4, December 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>We introduce dynamic incentive contracts into a model of unemployment fluctuations. Our main result is that wage cyclicality from incentives does not affect the response of unemployment to productivity shocks. The response of unemployment is the same, to a first-order, in two economies: one with flexible incentive pay, and another with exogenously fixed wages. This equivalence is due to movements in effort. Under the optimal incentive contract, firms' profits do not change when wages fall, because the effort of the worker falls too.</div>
-        <div class="links"><a href="https://www.nber.org/papers/w31722" target="_blank" rel="noopener">NBER</a>. <a href="https://www.dropbox.com/scl/fi/qcmsr47823j9uu0sq3tbz/BQ.bib?rlkey=ryjofcb2cn94dtxkaw9do3scl&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://twitter.com/and_joy_/status/1706630172072456560" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://marginalrevolution.com/marginalrevolution/2024/05/how-does-flexible-incentive-pay-affect-wage-rigidity.html" target="_blank" rel="noopener">Marginal Revolution</a>, <a href="https://www.stern.nyu.edu/experience-stern/faculty-research/bonus-question-how-does-flexible-incentive-pay-affect-wage-rigidity" target="_blank" rel="noopener">NYU Stern</a>, <a href="https://www.atlantafed.org/blogs/macroblog/2022/10/20/atlanta-feds-early-career-visitor-program-workshop-synopsis" target="_blank" rel="noopener">Atlanta Fed</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="GaurGrigsbyHazellNdiaye2026">Cite</button>. <a href="https://www.nber.org/papers/w31722" target="_blank" rel="noopener">NBER</a>. <a href="https://twitter.com/and_joy_/status/1706630172072456560" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://marginalrevolution.com/marginalrevolution/2024/05/how-does-flexible-incentive-pay-affect-wage-rigidity.html" target="_blank" rel="noopener">Marginal Revolution</a>, <a href="https://www.stern.nyu.edu/experience-stern/faculty-research/bonus-question-how-does-flexible-incentive-pay-affect-wage-rigidity" target="_blank" rel="noopener">NYU Stern</a>, <a href="https://www.atlantafed.org/blogs/macroblog/2022/10/20/atlanta-feds-early-career-visitor-program-workshop-synopsis" target="_blank" rel="noopener">Atlanta Fed</a>.</div>
       </article>
 
       <article class="paper" data-topics="tax africa">
@@ -263,7 +274,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status"><em>Journal of Monetary Economics</em>, vol. 150, March 2025, 103699.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>We study the welfare effects of unemployment insurance in Senegal, where formal workers are a small share of the labor force and informal workers can file false claims. We build a model with varying enforcement and funding sources and estimate it with a custom labor force survey. Liquidity gains are large and moral hazard responses are small: an additional dollar of benefits yields a consumption-equivalent gain of 60 to 90 cents, several times larger than comparable US estimates. Payroll-tax funding delivers the largest gains but becomes infeasible when few workers are formal and false claims are common. Consumption-tax funding delivers smaller gains but remains feasible under high informality.</div>
-        <div class="links"><a href="https://doi.org/10.1016/j.jmoneco.2024.103699" target="_blank" rel="noopener">Journal article</a>. <a href="https://www.dropbox.com/scl/fi/7v9umz935wf0w4q4rdy8r/UISN.bib?rlkey=vq4un17afv19f10z5wofoaqyt&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://doi.org/10.5281/zenodo.13968050" target="_blank" rel="noopener">Data</a>. <a href="https://twitter.com/and_joy_/status/1689366242509918208" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://voxdev.org/topic/social-protection/how-can-governments-fund-unemployment-insurance-low-income-settings" target="_blank" rel="noopener">VoxDev</a>, <a href="https://www.brookings.edu/articles/financing-unemployment-insurance-in-high-informality-economies-a-survey-analysis-of-senegal/" target="_blank" rel="noopener">Brookings</a>, <a href="https://www.worldbank.org/en/region/afr/brief/office-of-chief-economist-in-the-africa-region/events" target="_blank" rel="noopener">World Bank</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="NdiayeHerkenhoffCisseDellAcquaMbaye2025">Cite</button>. <a href="https://doi.org/10.1016/j.jmoneco.2024.103699" target="_blank" rel="noopener">Journal article</a>. <a href="https://doi.org/10.5281/zenodo.13968050" target="_blank" rel="noopener">Data</a>. <a href="https://twitter.com/and_joy_/status/1689366242509918208" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://voxdev.org/topic/social-protection/how-can-governments-fund-unemployment-insurance-low-income-settings" target="_blank" rel="noopener">VoxDev</a>, <a href="https://www.brookings.edu/articles/financing-unemployment-insurance-in-high-informality-economies-a-survey-analysis-of-senegal/" target="_blank" rel="noopener">Brookings</a>, <a href="https://www.worldbank.org/en/region/afr/brief/office-of-chief-economist-in-the-africa-region/events" target="_blank" rel="noopener">World Bank</a>.</div>
       </article>
 
       <article class="paper" data-topics="tax design">
@@ -272,7 +283,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status"><em>Journal of Political Economy Macroeconomics</em>, vol. 1, no. 2, pp. 371–402, June 2023.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Half of the jobs in the United States feature pay for performance. We derive incidence and optimum formulas for the rate of tax progressivity and the top income tax rate when such labor contracts arise from moral hazard frictions within firms. Our first main result is that the sensitivity of the worker's compensation to performance is roughly invariant to tax progressivity. Second, the optimal tax schedule is strictly less progressive than in standard models that treat pretax earnings risk as exogenous. Quantitatively, the welfare cost of not accounting for performance pay when choosing tax progressivity is 0.3% of consumption.</div>
-        <div class="links"><a href="https://doi.org/10.1086/724511" target="_blank" rel="noopener">Journal article</a>. <a href="https://www.dropbox.com/scl/fi/wozdz1gq1hlehm1b4vcme/RPP_jpema1_371.bib?rlkey=lj9r8x2gt2c6dfwttpy0tu1p8&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. <a href="https://x.com/and_joy_/status/1266489737487015938" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://www.minneapolisfed.org/article/2021/scholar-spotlight-abdoulaye-ndiaye" target="_blank" rel="noopener">Minneapolis Fed</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="DoligalskiNdiayeWerquin2023">Cite</button>. <a href="https://doi.org/10.1086/724511" target="_blank" rel="noopener">Journal article</a>. <a href="https://x.com/and_joy_/status/1266489737487015938" target="_blank" rel="noopener">X summary</a>. Coverage: <a href="https://www.minneapolisfed.org/article/2021/scholar-spotlight-abdoulaye-ndiaye" target="_blank" rel="noopener">Minneapolis Fed</a>.</div>
       </article>
 
       <article class="paper" data-topics="debt africa">
@@ -281,7 +292,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status"><em>Oxford Review of Economic Policy</em>, vol. 42, issue 2, Summer 2026, pp. 362–376, October 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Hidden public debt can abruptly reprice sovereign risk once it is revealed. We model optimal default after such a revelation and apply the framework to Senegal's 2024 debt audit, which sharply raised reported debt. A baseline calibration implies that default would have been optimal from 2023 onward. Because Senegal has kept repaying, we also build a no-default calibration. It requires income shocks more volatile and less persistent than history suggests, and places Senegal near the default boundary, where an adverse shock of about 3 percent could make restructuring optimal within a year. The revelation moved Senegal from moderate fiscal risk to acute vulnerability.</div>
-        <div class="links"><a href="https://doi.org/10.1093/oxrep/grag023" target="_blank" rel="noopener">Journal article</a>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6456639" target="_blank" rel="noopener">SSRN</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="CoulibalyNdiaye2026">Cite</button>. <a href="https://doi.org/10.1093/oxrep/grag023" target="_blank" rel="noopener">Journal article</a>. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6456639" target="_blank" rel="noopener">SSRN</a>.</div>
       </article>
 
       <article class="paper" data-topics="design">
@@ -289,7 +300,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status"><em>FC 2025: Proceedings of the International Conference on Financial Cryptography and Data Security</em>, February 2026, pp. 245–262.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>How can prices allocate resources efficiently in blockchains that process transactions through several parallel queues sharing one global capacity limit? Revenue-maximizing pricing tends to give all capacity to the highest-paying queue, while welfare-maximizing pricing generally serves every queue. Optimal relative prices depend on market size, demand elasticity, and local versus global congestion. The results apply to parallel-execution blockchains, DAG-based systems, and designs with multiple concurrent proposers.</div>
-        <div class="links"><a href="https://link.springer.com/chapter/10.1007/978-3-032-00492-5_16" target="_blank" rel="noopener">Proceedings</a>. <a href="https://www.dropbox.com/scl/fi/wjvtsq7q8eab71r4zs5vb/relativepricing.bib?rlkey=br49749tuzelbmcmgk7f412cx&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>. Coverage: <a href="https://www.youtube.com/watch?v=UD_7Crtxy-k" target="_blank" rel="noopener">a16z Crypto Research</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="Ndiaye2026Parallel">Cite</button>. <a href="https://link.springer.com/chapter/10.1007/978-3-032-00492-5_16" target="_blank" rel="noopener">Proceedings</a>. Coverage: <a href="https://www.youtube.com/watch?v=UD_7Crtxy-k" target="_blank" rel="noopener">a16z Crypto Research</a>.</div>
       </article>
 
       <article class="paper" data-topics="design">
@@ -297,24 +308,25 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status"><em>FC 2024: Proceedings of the International Conference on Financial Cryptography and Data Security</em>, February 2025, pp. 303–313.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>How should blockchains set transaction fees? I compare price-based controls, such as Ethereum's EIP-1559 base fee, with quantity-based controls, such as a fixed block size limit. Demand uncertainty, validator costs, cryptocurrency price swings, demand elasticity, and decentralization all shape which approach performs better. Modeling the choice as Nash bargaining between protocol designers and validators, I show that no single mechanism fits every blockchain, and hybrid designs combining both controls can be useful.</div>
-        <div class="links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-78676-1_17" target="_blank" rel="noopener">Proceedings</a>. <a href="https://www.dropbox.com/scl/fi/gu8mvq1t2mgpam165lad9/blockchainpvq.bib?rlkey=ott74pn7zogc0hhrlajwywos1&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="Ndiaye2025PvQ">Cite</button>. <a href="https://link.springer.com/chapter/10.1007/978-3-031-78676-1_17" target="_blank" rel="noopener">Proceedings</a>. </div>
       </article>
 
       <h3 class="group" id="working">Working Papers</h3>
 
       <article class="paper" data-topics="tax africa">
         <p class="t"><span class="badge">New</span><a href="/research/papers/Tax_Productivity.pdf" target="_blank" rel="noopener">Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis</a></p>
-        <p class="who">(with Radhika Goyal, Andres Jensen, David Lagakos, and Yuntian Zhao)</p>
+        <p class="who">(with Radhika Goyal, Anders Jensen, David Lagakos, and Yuntian Zhao)</p>
         <p class="status">Submitted. October 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Does governments' ability to collect taxes drive economic development? Using a new dataset, we show that tax revenue per dollar spent on collection rises steeply with income. We build a growth model in which tax collection uses labor and revenue funds productive public capital. A 50 percent rise in tax collection productivity raises long-run output in low-income economies far more than standard growth accounting predicts, with smaller gains in richer countries.</div>
-        <div class="links"><a href="https://www.nber.org/papers/w35934" target="_blank" rel="noopener">NBER</a>. <a href="https://www.youtube.com/live/obZ3xh71edA?t=19220s" target="_blank" rel="noopener">Video</a>. Coverage: <a href="https://voxdev.org/topic/macroeconomics-growth/making-tax-collection-cheaper-could-unlock-growth" target="_blank" rel="noopener">VoxDev</a>, <a href="https://www.youtube.com/watch?v=TsR9FoFjJiE" target="_blank" rel="noopener">AUL</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="GoyalJensenLagakosNdiayeZhao2026">Cite</button>. <a href="https://www.nber.org/papers/w35934" target="_blank" rel="noopener">NBER</a>. <a href="https://www.youtube.com/live/obZ3xh71edA?t=19220s" target="_blank" rel="noopener">Video</a>. Coverage: <a href="https://voxdev.org/topic/macroeconomics-growth/making-tax-collection-cheaper-could-unlock-growth" target="_blank" rel="noopener">VoxDev</a>, <a href="https://www.youtube.com/watch?v=TsR9FoFjJiE" target="_blank" rel="noopener">AUL</a>.</div>
       </article>
 
       <article class="paper" data-topics="africa">
         <p class="t"><a href="https://www.dropbox.com/scl/fi/nktrzivdz0bn52bx9gzbn/20260918_Bergeron_Ndiaye_paper.pdf?rlkey=sa02k1bxj2ag3dto0j4uhzbgu&amp;raw=1" target="_blank" rel="noopener">Disrupting State Legitimacy: Evidence from 48,000 Colonial Documents</a></p>
         <p class="who">(with Augustin Bergeron)</p>
         <p class="status">August 2026.</p>
+        <div class="links"><button class="cite-btn" type="button" data-cite="BergeronNdiaye2026">Cite</button>.</div>
       </article>
 
       <article class="paper" data-topics="design">
@@ -323,14 +335,14 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <p class="status">May 2026.</p>
         <button class="toggle" type="button" aria-expanded="false">Show abstract</button>
         <div class="abstract" hidden>Studies of employer market power usually take labor market boundaries as fixed, such as commuting zones or counties. Using more than 63 million online applications to US hourly jobs, we show that search breadth varies widely across workers and rises when local labor markets weaken: workers search farther when their home market is concentrated or cyclically weak. We build a search-and-matching model with granular firms and costly search across distance, and confirm its four predictions for applications and wages. Employer market power depends jointly on local concentration and on how workers reallocate their search.</div>
-        <div class="links"><a href="https://drive.google.com/file/d/1TEaJyNaJm4qdKh5u7G4XK07OGE9GaDIe/view" target="_blank" rel="noopener">Slides</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="BelloMacalusoNdiaye2026">Cite</button>. <a href="https://drive.google.com/file/d/1TEaJyNaJm4qdKh5u7G4XK07OGE9GaDIe/view" target="_blank" rel="noopener">Slides</a>.</div>
       </article>
 
       <article class="paper" data-topics="debt">
         <p class="t"><a href="https://www.dropbox.com/scl/fi/i9t2um5qd9x0vw85lnih3/survey_finance-2.pdf?rlkey=38vgv0h91hxpp9m7jg3r0tqaw&amp;e=1&amp;raw=1" target="_blank" rel="noopener">Mispricing Narratives after Social Unrest</a></p>
         <p class="who">(with Bocar A. Ba, Roman G. Rivera, and Alexander Whitefield)</p>
         <p class="status">March 2025.</p>
-        <div class="links"><a href="https://www.nber.org/papers/w32730" target="_blank" rel="noopener">NBER</a>. <a href="https://www.dropbox.com/scl/fi/c8gb8d52ce2mupdwkjaz4/Narratives.bib?rlkey=54nxz4gn4p17xfedn7svx9y6l&amp;raw=1" target="_blank" rel="noopener">BibTeX</a>.</div>
+        <div class="links"><button class="cite-btn" type="button" data-cite="BaNdiayeRiveraWhitefield2024">Cite</button>. <a href="https://www.nber.org/papers/w32730" target="_blank" rel="noopener">NBER</a>. </div>
       </article>
 
       <h3 class="group" id="ongoing">Selected Ongoing Research</h3>
@@ -457,6 +469,52 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   </main>
 </div>
 
+<script type="application/json" id="bibtex-data">{
+"NdiayeYu2025": "@techreport{NdiayeYu2025,\n  author      = {Ndiaye, Abdoulaye and Yu, Zhixiu},\n  title       = {Flexible Retirement and Optimal Taxation},\n  institution = {Centre for Economic Policy Research},\n  type        = {CEPR Discussion Paper},\n  number      = {20322},\n  year        = {2025},\n  month       = jun,\n  note        = {Conditionally accepted, \\emph{Quarterly Journal of Economics}}\n}",
+"CovenGolderGuptaNdiaye2026": "@techreport{CovenGolderGuptaNdiaye2026,\n  author      = {Coven, Joshua and Golder, Sebastian and Gupta, Arpit and Ndiaye, Abdoulaye},\n  title       = {Property Taxes and Housing Allocation Under Financial Constraints},\n  institution = {National Bureau of Economic Research},\n  type        = {NBER Working Paper},\n  number      = {35587},\n  year        = {2026},\n  month       = aug,\n  doi         = {10.3386/w35587},\n  url         = {https://www.nber.org/papers/w35587}\n}",
+"Ndiaye2024FeePolicies": "@techreport{Ndiaye2024FeePolicies,\n  author      = {Ndiaye, Abdoulaye},\n  title       = {Why {Bitcoin} and {Ethereum} Differ in Transaction Fees: A Theory of Blockchain Fee Policies},\n  institution = {Centre for Economic Policy Research},\n  type        = {CEPR Discussion Paper},\n  number      = {18890},\n  year        = {2024},\n  url         = {https://cepr.org/publications/dp18890}\n}",
+"Ndiaye2024Boycotts": "@techreport{Ndiaye2024Boycotts,\n  author      = {Ndiaye, Abdoulaye},\n  title       = {A Theory of International Boycotts},\n  institution = {Centre for Economic Policy Research},\n  type        = {CEPR Discussion Paper},\n  number      = {18868},\n  year        = {2024},\n  url         = {https://cepr.org/publications/dp18868},\n  note        = {Conditionally accepted, \\emph{Journal of International Economics}}\n}",
+"GaurGrigsbyHazellNdiaye2026": "@article{GaurGrigsbyHazellNdiaye2026,\n  author  = {Gaur, Meghana and Grigsby, John and Hazell, Jonathon and Ndiaye, Abdoulaye},\n  title   = {Bonus Question: How Does Flexible Incentive Pay Affect Unemployment Dynamics?},\n  journal = {American Economic Review: Insights},\n  volume  = {8},\n  number  = {4},\n  year    = {2026},\n  note    = {Forthcoming}\n}",
+"NdiayeHerkenhoffCisseDellAcquaMbaye2025": "@article{NdiayeHerkenhoffCisseDellAcquaMbaye2025,\n  author  = {Ndiaye, Abdoulaye and Herkenhoff, Kyle and Ciss{\\'e}, Abdoulaye and Dell'Acqua, Alessandro and Mbaye, Ahmadou Aly},\n  title   = {How to Fund Unemployment Insurance with Informality and False Claims: Evidence from {Senegal}},\n  journal = {Journal of Monetary Economics},\n  volume  = {150},\n  pages   = {103699},\n  year    = {2025},\n  doi     = {10.1016/j.jmoneco.2024.103699}\n}",
+"DoligalskiNdiayeWerquin2023": "@article{DoligalskiNdiayeWerquin2023,\n  author  = {Doligalski, Pawe{\\l} and Ndiaye, Abdoulaye and Werquin, Nicolas},\n  title   = {Redistribution with Performance Pay},\n  journal = {Journal of Political Economy Macroeconomics},\n  volume  = {1},\n  number  = {2},\n  pages   = {371--402},\n  year    = {2023},\n  doi     = {10.1086/724511}\n}",
+"CoulibalyNdiaye2026": "@article{CoulibalyNdiaye2026,\n  author  = {Coulibaly, Louphou and Ndiaye, Abdoulaye},\n  title   = {Optimal Default in a Small Open Economy: {Senegal}'s Hidden Debt Crisis},\n  journal = {Oxford Review of Economic Policy},\n  volume  = {42},\n  number  = {2},\n  pages   = {362--376},\n  year    = {2026},\n  doi     = {10.1093/oxrep/grag023}\n}",
+"Ndiaye2026Parallel": "@inproceedings{Ndiaye2026Parallel,\n  author    = {Ndiaye, Abdoulaye},\n  title     = {Parallel Execution Fee Mechanisms},\n  booktitle = {Financial Cryptography and Data Security. {FC} 2025 International Workshops},\n  editor    = {Haslhofer, Bernhard and Xu, Java and Victor, Friedhelm and others},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {15753},\n  pages     = {245--262},\n  publisher = {Springer},\n  address   = {Cham},\n  year      = {2026},\n  doi       = {10.1007/978-3-032-00492-5_16}\n}",
+"Ndiaye2025PvQ": "@inproceedings{Ndiaye2025PvQ,\n  author    = {Ndiaye, Abdoulaye},\n  title     = {Blockchain Price vs. Quantity Controls},\n  booktitle = {Financial Cryptography and Data Security ({FC} 2024)},\n  editor    = {Clark, Jeremy and Shi, Elaine},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {14744},\n  pages     = {303--313},\n  publisher = {Springer},\n  address   = {Cham},\n  year      = {2025},\n  doi       = {10.1007/978-3-031-78676-1_17}\n}",
+"GoyalJensenLagakosNdiayeZhao2026": "@techreport{GoyalJensenLagakosNdiayeZhao2026,\n  author      = {Goyal, Radhika and Jensen, Anders and Lagakos, David and Ndiaye, Abdoulaye and Zhao, Yuntian},\n  title       = {Tax Productivity and Economic Development: A Quantitative Macroeconomic Analysis},\n  institution = {National Bureau of Economic Research},\n  type        = {NBER Working Paper},\n  number      = {35934},\n  year        = {2026},\n  month       = oct,\n  doi         = {10.3386/w35934},\n  url         = {https://www.nber.org/papers/w35934}\n}",
+"BergeronNdiaye2026": "@unpublished{BergeronNdiaye2026,\n  author = {Bergeron, Augustin and Ndiaye, Abdoulaye},\n  title  = {Disrupting State Legitimacy: Evidence from 48,000 Colonial Documents},\n  note   = {Working paper},\n  year   = {2026},\n  month  = aug\n}",
+"BelloMacalusoNdiaye2026": "@unpublished{BelloMacalusoNdiaye2026,\n  author = {Bello, Olalekan and Macaluso, Claudia and Ndiaye, Abdoulaye},\n  title  = {Employer Market Power with Endogenous Labor Market Boundaries},\n  note   = {Working paper},\n  year   = {2026},\n  month  = may\n}",
+"BaNdiayeRiveraWhitefield2024": "@techreport{BaNdiayeRiveraWhitefield2024,\n  author      = {Ba, Bocar A. and Ndiaye, Abdoulaye and Rivera, Roman G. and Whitefield, Alexander},\n  title       = {Mispricing Narratives after Social Unrest},\n  institution = {National Bureau of Economic Research},\n  type        = {NBER Working Paper},\n  number      = {32730},\n  year        = {2024},\n  month       = jul,\n  doi         = {10.3386/w32730},\n  url         = {https://www.nber.org/papers/w32730}\n}"
+}</script>
+<script>
+(function(){
+  var data = {};
+  try { data = JSON.parse(document.getElementById('bibtex-data').textContent); } catch (e) {}
+  var toast = document.createElement('div');
+  toast.className = 'cite-toast'; toast.setAttribute('role', 'status'); toast.setAttribute('aria-live', 'polite');
+  document.body.appendChild(toast);
+  var timer;
+  function say(msg){ toast.textContent = msg; toast.classList.add('show'); clearTimeout(timer); timer = setTimeout(function(){ toast.classList.remove('show'); }, 2200); }
+  function fallback(btn, text){
+    var art = btn.closest('article'), box = art.querySelector('.cite-fallback');
+    if (!box) {
+      box = document.createElement('div'); box.className = 'cite-fallback';
+      box.innerHTML = '<p>Copy the BibTeX entry below.</p><textarea readonly aria-label="BibTeX citation"></textarea>';
+      btn.closest('.links').insertAdjacentElement('afterend', box);
+    }
+    var ta = box.querySelector('textarea'); ta.value = text; ta.focus(); ta.select();
+    try { if (document.execCommand('copy')) { say('BibTeX citation copied'); return; } } catch (e) {}
+    say('Select the citation below to copy it');
+  }
+  document.querySelectorAll('.cite-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = data[btn.dataset.cite]; if (!text) return;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ say('BibTeX citation copied'); }, function(){ fallback(btn, text); });
+      } else { fallback(btn, text); }
+    });
+  });
+})();
+</script>
 <script>
 (function(){
   var root = document.documentElement, btn = document.getElementById('theme-toggle');
